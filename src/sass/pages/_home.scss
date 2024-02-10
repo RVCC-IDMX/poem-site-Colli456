@@ -1,16 +1,57 @@
-/* home */
-@use "../abstracts/variables" as var;
-@use "../base/typography" as type;
-
 body {
-  font-family: type.$font;
-  background-color: var.$bg-very-light;
-  width: min(100% - 2rem, 60ch);
-  margin-inline: auto;
-  margin-block: 4rem;
+  font-family: "martal sans";
+  background-color: gray;
+  color: white;
 }
 
-h1 {
-  color: var.$primary-color;
+#Poem p {
+  background-color: black;
+  font-size: large;
+  line-height: 1.7;
+  /*text-align: center;*/
+  padding: 1Rem ;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#author p {
+  background-color: black;
+  font-size: large;
+  line-height: 1.7;
   text-align: center;
+  padding: 1Rem ;
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+}
+
+ #Pic img {
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+} 
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media screen and (min-width:800px){
+  main{
+    grid-template-columns: 1fr 1fr;
+  }
+  #Pic {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  #Poem{
+    grid-column: 1;
+    grid-row: 1;
+  }
+  #author{
+    grid-column: 2;
+    grid-row: 2;
+  }
 }
